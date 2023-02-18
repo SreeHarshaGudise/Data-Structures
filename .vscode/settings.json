@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "Array.C": "cpp",
+        "Two_D_Array.C": "cpp",
+        "Array_ADT.C": "cpp",
+        "MissingElement.C": "cpp",
+        "DuplicateElement.C": "cpp",
+        "ArrayQueries.C": "cpp",
+        "tempCodeRunnerFile.C": "cpp",
+        "Declaration.C": "cpp",
+        "StringLength.C": "cpp",
+        "ChangingCase.C": "cpp",
+        "Reversing.C": "cpp",
+        "DuplicatesUsingBitwise.C": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}
