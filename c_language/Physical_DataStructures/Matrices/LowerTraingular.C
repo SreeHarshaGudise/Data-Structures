@@ -1,0 +1,96 @@
+#include<iostream>
+#include<stdio.h>
+#include<stdlib.h>
+
+using namespace std;
+
+/* Logic for Lower Traingular Matrix storage in rowmajor order
+Consider a matrix 
+[ 1 0 0 0 ]
+| 2 3 0 0 |
+| 4 5 6 0 |
+[ 7 8 9 10]
+
+here A[1][2] means 1 row 2 column where generalized format shows i as row and j as column
+So all zero elements are in position where i<j => M[i,j]=0 where i<j
+and distinct elements are in position where i>=j => M[i,j]= non zero where i>=j
+
+total non zero elements in matrix = 1(first row) + 2(second row) + 3 (3rd row) + 4(4th row) = 1+2+3+4 => n(n+1)/2
+total elements in matrix = n^2
+total zero elements in matrix = n^2-n(n+1)/2 = n(n-1)/2
+
+To store nonzero elements in array we need n(n+1)/2 elements space
+[A11,A21,A22,A31,A32,A33,A41,A42,A43,A44] Array
+  0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 Index
+
+  To access A41 => Aij = i*(i-1)/2+j-1
+*/
+
+
+struct Matrix 
+{
+    int *A;
+    int n;
+};
+
+void Set(struct Matrix *m, int i, int j, int x)
+{
+    if(i>=j)
+    {
+        m->A[i*(i-1)/2+j-1]=x;
+    }
+}
+
+int Get(struct Matrix m, int i, int j)
+{
+    if(i>=j)
+        return m.A[i*(i-1)/2+j-1];
+    else
+        return 0;
+}
+
+void Display(struct Matrix m)
+{
+    int i,j;
+
+    for(i=1;i<=m.n;i++)
+    {
+        for(j=1;j<=m.n;j++)
+        {
+            if(i>=j)
+                printf("%d ",m.A[i*(i-1)/2+j-1]);
+            else
+                printf("0 ");
+        }
+        printf("\n");
+    }
+}
+
+
+int main()
+{
+    struct Matrix m;
+    int i,j,x;
+
+    printf("Enter the dimension of matrix ");
+    scanf("%d",&m.n);
+    m.A=(int *)malloc(m.n*(m.n-1)/2*sizeof(int));
+
+    printf("Enter Elements of matrix ");
+    for(i=1;i<=m.n;i++)
+    {
+        for(j=1;j<=m.n;j++)
+        {
+            if(i>=j)
+            {
+                scanf("%d",&x);
+                Set(&m,i,j,x);
+            }
+        }
+    }
+    printf("\n\n");
+    printf("%d \n",Get(m,2,1));
+    Display(m);
+
+  return 0;
+}

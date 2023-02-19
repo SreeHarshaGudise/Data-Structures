@@ -11,7 +11,9 @@
         "StringLength.C": "cpp",
         "ChangingCase.C": "cpp",
         "Reversing.C": "cpp",
-        "DuplicatesUsingBitwise.C": "cpp"
+        "DuplicatesUsingBitwise.C": "cpp",
+        "Diagonal.C": "cpp",
+        "LowerTraingular.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
