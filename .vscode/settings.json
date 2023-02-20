@@ -13,7 +13,10 @@
         "Reversing.C": "cpp",
         "DuplicatesUsingBitwise.C": "cpp",
         "Diagonal.C": "cpp",
-        "LowerTraingular.C": "cpp"
+        "LowerTraingular.C": "cpp",
+        "UpperTraingular.C": "cpp",
+        "Triagonal.C": "cpp",
+        "TriDiagonal.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
