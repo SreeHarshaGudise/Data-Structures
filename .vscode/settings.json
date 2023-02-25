@@ -16,7 +16,8 @@
         "LowerTraingular.C": "cpp",
         "UpperTraingular.C": "cpp",
         "Triagonal.C": "cpp",
-        "TriDiagonal.C": "cpp"
+        "TriDiagonal.C": "cpp",
+        "SparseMatrix.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
