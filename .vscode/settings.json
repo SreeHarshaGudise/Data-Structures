@@ -17,7 +17,8 @@
         "UpperTraingular.C": "cpp",
         "Triagonal.C": "cpp",
         "TriDiagonal.C": "cpp",
-        "SparseMatrix.C": "cpp"
+        "SparseMatrix.C": "cpp",
+        "PolynomialRep.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
