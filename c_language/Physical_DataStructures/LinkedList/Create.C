@@ -60,6 +60,29 @@ void RevDisplayRec(struct Node *p)
     
 }
 
+
+// This Search is improved as finding the key element from the linked list
+// we remove key from the list and place it first of list so that if the same element needs to be found from list
+// can be compared and get it from first comparison. 
+
+struct Node * Search(struct Node *p, int key)
+{
+    struct Node *q;
+    while(p!=NULL)
+    {
+        if(key==p->data)
+        {
+            q->next=p->next;
+            p->next=first;
+            first=p;
+            return p;
+        }
+        q=p;
+        p=p->next;
+    }
+    return NULL;
+}
+
 int Count(struct Node *p)
 {
     int cnt=0;
@@ -103,6 +126,7 @@ int Max(struct Node *p)
 
 int main()
 {
+    struct Node *temp;
    int A[]={3,2,6,5,10};
    create(A,5);
 //    display(first); /* looping way of displaying*/
@@ -112,7 +136,14 @@ int main()
 
    printf("\nNodes in the linked list are %d ",Count(first));
    printf("\nSum of Nodes in the linked list is %d ",Sum(first));
-   printf("\n Max Element of Linked list is %d ", Max(first));
+   printf("\n Max Element of Linked list is %d \n", Max(first));
 
+   temp=Search(first,5);
+   if(temp)
+    printf("The key %d is found\n: ",temp->data);
+   else
+    printf("Key Not found \n");
+
+    DisplayRec(first);
     return 0;
 }
