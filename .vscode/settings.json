@@ -19,7 +19,8 @@
         "TriDiagonal.C": "cpp",
         "SparseMatrix.C": "cpp",
         "PolynomialRep.C": "cpp",
-        "Create.C": "cpp"
+        "Create.C": "cpp",
+        "Insert.C": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
